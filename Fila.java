@@ -19,11 +19,11 @@ public class Fila<T> {
             throw new IllegalStateException("A fila está vazia.");
         }
         T item = data[base];
-        // Desloca os elementos para "frente" na fila
+        
         for (int i = 0; i < top; i++) {
             data[i] = data[i + 1];
         }
-        data[top] = null; // Limpa a posição final
+        data[top] = null; 
         top--;
         return item;
     }
@@ -48,12 +48,12 @@ public class Fila<T> {
         fila.add(1);
         fila.add(2);
         fila.add(3);
-        System.out.println(fila.remove()); // Saída: 1
+        System.out.println(fila.remove()); 
         fila.add(4);
         fila.add(5);
-        fila.add(6); // A fila agora está cheia
-        System.out.println(fila.isFull()); // Saída: true
+        fila.add(6); 
+        System.out.println(fila.isFull());
         fila.clear();
-        System.out.println(fila.isEmpty()); // Saída: true
+        System.out.println(fila.isEmpty()); 
     }
 }
